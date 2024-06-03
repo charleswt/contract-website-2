@@ -57,11 +57,11 @@ ul {
 
 header {
   z-index: 999;
-  background-color: rgb(255, 254, 248);
+  background-color: rgb(241, 116, 116);
   position: fixed;
-  height: 7vh;
+  height: 4rem;
   width: 100%;
-  border-bottom: 3px solid black;
+  color: white;
 }
 
 header div {
@@ -92,10 +92,11 @@ header div div div {
 
 header div div div a {
   border-bottom: 3px solid rgba(0, 0, 0, 0);
+  color: white;
 }
 
 header div div div a:hover {
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid white;
 }
 
 header div div div a:link {
@@ -104,7 +105,7 @@ header div div div a:link {
 }
 
 header div div div a:visited {
-  color: black;
+  color: white;
 }
 
 /* ///////// */
@@ -120,7 +121,9 @@ main {
   height: 100%;
 }
 
-main h1 {
+.fixed {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   width: 100%;
   margin: 0 auto;
@@ -128,6 +131,35 @@ main h1 {
   font-size: 2rem;
   border-right:3px solid black;
   padding-left: 3rem;
+}
+
+@media screen and (width <= 1300px) {
+  .fixed div, 
+  .fixed div h2,
+  .fixed div h3,
+  .fixed div h4 {
+    max-width: 200px;
+  }
+}
+
+.fixed div {
+  max-width: 300px;
+}
+
+.fixed div h2 a {
+  font-size: 1.2rem;
+}
+
+.fixed div h3 {
+  font-size: 1rem;
+}
+
+.fixed div h4 {
+  font-size: 1rem;
+}
+
+.fixed img {
+  max-width: 100px;
 }
 
 main h6 {
@@ -141,23 +173,64 @@ main h6 {
   flex-direction: column;
   padding: 6%;
   margin: 0 auto;
-  border-left:3px solid black;
+  border-left:3px solid rgb(241, 116, 116);
 }
 
-.blog h2 {
-  font-size: 1.5rem;
+.long-title {
+  margin-left: -2rem;
+}
+
+.blog div h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
   width: max-content;
-  border-bottom:1px solid blue;
+  text-decoration: underline;
+  margin-bottom: 1rem;
 }
 
-.blog h3 {
-  font-size: 1.3rem;
-  border-bottom:3px solid blue;
+.blog div h3 {
+  color: rgb(46, 46, 46);
+  font-size: 1.2rem;
+  padding-bottom: .3rem;
+  margin-bottom: 5%;
 }
 
+.blog div h4 {
+  color: rgb(46, 46, 46);
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: .3rem;
+  margin-bottom: 1%;
+}
+
+.blog div img {
+  display: flex;
+  margin: 0 auto;
+}
+
+.blog div {
+  max-width: 700px;
+}
+
+.blog div article, 
+.blog div article a {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: rgb(46, 46, 46);
+  text-indent: 1rem;
+}
+
+.blog div h2, 
+.blog div h3,
+.blog div h4,
+.blog div img,
 .blog div article {
   max-width: 700px;
 }
+
+
 
 @media screen and (width <= 1200px) {
   .blog {
