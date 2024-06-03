@@ -56,6 +56,7 @@ ul {
 /* ////// */
 
 header {
+  top: 0;
   z-index: 999;
   background-color: rgb(241, 116, 116);
   position: fixed;
@@ -143,7 +144,7 @@ main {
 }
 
 .fixed div {
-  max-width: 300px;
+  max-width: 275px;
 }
 
 .fixed div h2 a {
@@ -169,6 +170,7 @@ main h6 {
 }
 
 .blog {
+  z-index: 998;
   display: flex;
   flex-direction: column;
   padding: 6%;
@@ -186,6 +188,7 @@ main h6 {
   width: max-content;
   text-decoration: underline;
   margin-bottom: 1rem;
+  margin-top: 3rem;
 }
 
 .blog div h3 {
@@ -220,6 +223,10 @@ main h6 {
   line-height: 2rem;
   color: rgb(46, 46, 46);
   text-indent: 1rem;
+}
+
+.blog div article a {
+  color: blue;
 }
 
 .blog div h2, 
