@@ -5,7 +5,7 @@
     "main": "/",
     "scripts": {
         "start": "concurrently \"cd client && npm run start\" \"cd server && npm run start\"",
-        "install": "conscurrently \"cd client npm run install\" \"cd server npm run install\"",
+        "install": "concurrently \"cd client npm run install\" \"cd server npm run install\"",
         "build": "cd client && npm run build"
     },
     "dependencies": {
