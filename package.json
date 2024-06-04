@@ -4,12 +4,11 @@
     "version": "1.0.0",
     "main": "/",
     "scripts": {
-        "start": "nodemon server.js"
+        "start": "conscurrently \"cd client npm run start\" \"cd server npm run start\"",
+        "install": "npm install",
+        "install:client:server": "conscurrently \"cd client npm run install\" \"cd server npm run install\""
     },
     "dependencies": {
-        "dotenv": "^16.4.5",
-        "express": "^4.19.2",
-        "nodemon": "^3.1.0",
-        "path": "^0.12.7"
+        "concurrently": "^8.2.2"
     }
 }
