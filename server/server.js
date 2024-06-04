@@ -12,13 +12,13 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 app.use(session({
-    secret: 'Super secret secret',
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: {
         maxAge: 300000, // 5 minutes
         httpOnly: true,
-        secure: false, // Set to true if using HTTPS
+        secure: true, // Set to true if using HTTPS
         sameSite: 'strict'
     }
 }));
