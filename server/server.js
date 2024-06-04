@@ -52,4 +52,8 @@ const startApolloServer = async () => {
     });
   });
 };
+console.log(`PORT: ${PORT}`);
+console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
+console.log(`Static Path: ${path.join(__dirname, '../client/dist')}`);
+console.log(`Secret: ${process.env.SECRET}`);
 startApolloServer();
