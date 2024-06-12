@@ -5,8 +5,8 @@ const express = require('express');
 const path = require('path');
 // const routes = require('./routes')
 
-const { typeDefs, resolvers } = require('./schemas');
-const db = require('./config/connection');
+// const { typeDefs, resolvers } = require('./schemas');
+// const db = require('./config/connection');
 
 const PORT = process.env.PORT || 443;
 const app = express();
@@ -41,6 +41,7 @@ const startApolloServer = async () => {
     app.get('*', (req, res) => {
       res.sendFile(path.join(__dirname, '../client/dist'));
     });
+    console.log(`Static Path: ${path.join(__dirname, '../client/dist')}`);
   }
   
   // app.use('/graphql', expressMiddleware(server));
@@ -52,8 +53,8 @@ const startApolloServer = async () => {
     });
   // });
 };
-// console.log(`PORT: ${PORT}`);
-// console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
-// console.log(`Static Path: ${path.join(__dirname, '../client/dist')}`);
-// console.log(`Secret: ${process.env.SECRET}`);
+console.log(`PORT: ${PORT}`);
+console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
+console.log(`Static Path: ${path.join(__dirname, '../client/dist')}`);
+console.log(`Secret: ${process.env.SECRET}`);
 startApolloServer();
