@@ -108,6 +108,17 @@ header div div div a:visited {
   color: white;
 }
 
+/* ////// */
+/* FOOTER */
+/* ////// */
+
+.footer {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  bottom: 0;
+}
+
 /* ///////// */
 /* BLOG POST */
 /* ///////// */

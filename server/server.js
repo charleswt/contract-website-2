@@ -8,11 +8,11 @@ const path = require('path');
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
-const PORT = process.env.PORT || 443;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(session({
-    secret: process.env.SECRET,
+    secret: process.env.SECRET || 'development',
     resave: false,
     saveUninitialized: true,
     cookie: {

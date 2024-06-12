@@ -4,7 +4,8 @@
     "version": "1.0.0",
     "main": "/",
     "scripts": {
-        "start": "concurrently \"cd client && npm run start\" \"cd server && npm run start\"",
+        "start": "concurrently \"cd client && npm run build\" \"cd server && npm run start\"",
+        "start:dev": "concurrently \"cd client && npm run start:dev\" \"cd server && npm run start\"",
         "install": "concurrently \"cd client && npm i\" \"cd server && npm i\"",
         "build": "cd client && npm run build"
     },
