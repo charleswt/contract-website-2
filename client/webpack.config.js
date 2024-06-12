@@ -83,10 +83,9 @@ module.exports = {
     new InjectManifest({
       swSrc: "./src-sw.js",
       swDest: "./src-sw.js",
-      maximumFileSizeToCacheInBytes: 10 * 1024 * 1024, // Example: Set maximum file size to 10 MB
+      maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
     }),
 
-    // Creates a manifest.json file.
     new WebpackPwaManifest({
       fingerprints: false,
       inject: true,

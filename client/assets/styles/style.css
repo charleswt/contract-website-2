@@ -281,3 +281,76 @@ main h6 {
     margin: 0 .5rem;
   }
 }
+
+/* ///// */
+/* index */
+/* ///// */
+
+.top5 {
+  padding: 1rem;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.top5 h1 {
+  font-size: 1.8rem;
+  margin-bottom: .5rem;
+}
+
+.top5 ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 0;
+}
+
+.top5 ul li {
+  width: 20%;
+  margin: 0 .2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .top5 ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .top5 ul li:nth-child(5) {
+    grid-column: 1 / -1;
+  }
+  .top5 ul li {
+    width: fit-content;
+  }
+}
+
+.about {
+  margin-top: 4rem;
+}
+
+.about div {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.about div h2 {
+  font-size: 1.8rem;
+  margin-bottom: .7rem;
+}
+
+.about div h3 {
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+.about div h4 {
+  margin-bottom: .5rem;
+  border-bottom: 3px solid rgba(0, 0, 0, .3);
+}
+
+.about div article {
+  line-height: 2rem;
+  font-size: 1.1rem;
+}
