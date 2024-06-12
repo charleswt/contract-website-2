@@ -7,6 +7,9 @@ import flawlessLegsFace from '../../assets/images/flawlessLegsFace.webp'
 import tangleTeezer from '../../assets/images/tangleTeezer.webp'
 import uLikeLazer from '../../assets/images/uLikeLazer.webp'
 import imgLogo from '../../assets/images/logo.webp'
+import boldPowder from '../../assets/images/BOLDIFYpowder.webp'
+import tymo from '../../assets/images/TYMO.webp'
+import garnierDye from '../../assets/images/garnierDye.webp'
 
 // Check if service workers are supported
 if ('serviceWorker' in navigator) {
