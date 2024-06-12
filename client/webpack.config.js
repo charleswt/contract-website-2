@@ -6,7 +6,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  mode: "development",
   entry: {
     main: "./src/scripts/index.js",
   },

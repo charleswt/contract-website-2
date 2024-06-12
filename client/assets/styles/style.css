@@ -113,10 +113,12 @@ header div div div a:visited {
 /* ////// */
 
 .footer {
-  position: absolute;
+  margin: 0 auto;
+  margin-top: 1rem;
+  max-width: 800px;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
-  bottom: 0;
 }
 
 /* ///////// */
@@ -262,6 +264,12 @@ main h6 {
     background-color: rgb(255, 254, 248);
     padding-top: 60px;
     text-align: center;
+  }
+  .fixed,
+  .fixed div, 
+  .fixed div a {
+    top: -1000;
+    color: white;
   }
 }
 
