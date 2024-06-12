@@ -1,7 +1,7 @@
 const express = require('express');
-const session = require('express-session');
-const { ApolloServer } = require('@apollo/server');
-const { expressMiddleware } = require('@apollo/server/express4');
+// const session = require('express-session');
+// const { ApolloServer } = require('@apollo/server');
+// const { expressMiddleware } = require('@apollo/server/express4');
 const path = require('path');
 // const routes = require('./routes')
 
@@ -11,25 +11,25 @@ const db = require('./config/connection');
 const PORT = process.env.PORT || 443;
 const app = express();
 
-app.use(session({
-    secret: process.env.SECRET || 'development',
-    resave: false,
-    saveUninitialized: true,
-    cookie: {
-        maxAge: 300000, // 5 minutes
-        httpOnly: true,
-        secure: true, // Set to true if using HTTPS
-        sameSite: 'strict'
-    }
-}));
+// app.use(session({
+//     secret: process.env.SECRET || 'development',
+//     resave: false,
+//     saveUninitialized: true,
+//     cookie: {
+//         maxAge: 300000, // 5 minutes
+//         httpOnly: true,
+//         secure: true, // Set to true if using HTTPS
+//         sameSite: 'strict'
+//     }
+// }));
 
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-});
+// const server = new ApolloServer({
+//   typeDefs,
+//   resolvers,
+// });
 
 const startApolloServer = async () => {
-  await server.start();
+  // await server.start();
 
   app.use(express.urlencoded({ extended: false }));
   app.use(express.json());
@@ -43,17 +43,17 @@ const startApolloServer = async () => {
     });
   }
   
-  app.use('/graphql', expressMiddleware(server));
+  // app.use('/graphql', expressMiddleware(server));
 
   db.once('open', () => {
     app.listen(PORT, () => {
       console.log(`API server running on port ${PORT}!`);
-      console.log(`Use GraphQL at http://localhost:${PORT}/graphql`);
+      // console.log(`Use GraphQL at http://localhost:${PORT}/graphql`);
     });
   });
 };
-console.log(`PORT: ${PORT}`);
-console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
-console.log(`Static Path: ${path.join(__dirname, '../client/dist')}`);
-console.log(`Secret: ${process.env.SECRET}`);
+// console.log(`PORT: ${PORT}`);
+// console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
+// console.log(`Static Path: ${path.join(__dirname, '../client/dist')}`);
+// console.log(`Secret: ${process.env.SECRET}`);
 startApolloServer();
