@@ -45,12 +45,12 @@ const startApolloServer = async () => {
   
   // app.use('/graphql', expressMiddleware(server));
 
-  db.once('open', () => {
+  // db.once('open', () => {
     app.listen(PORT, () => {
       console.log(`API server running on port ${PORT}!`);
       // console.log(`Use GraphQL at http://localhost:${PORT}/graphql`);
     });
-  });
+  // });
 };
 // console.log(`PORT: ${PORT}`);
 // console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
