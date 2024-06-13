@@ -109,6 +109,16 @@ module.exports = {
           destination: path.join("assets", "images"),
         },
         {
+          src: path.resolve("assets/images/hamburger.webp"),
+          sizes: [60],
+          destination: path.join("assets", "images"),
+        },
+        {
+          src: path.resolve("assets/images/logo.ico"),
+          sizes: [64],
+          destination: path.join("assets", "images"),
+        },
+        {
           src: "assets/images/logo.webp",
           sizes: "196x196",
           type: "image/webp",

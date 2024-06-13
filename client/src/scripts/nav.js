@@ -7,7 +7,7 @@ const bigNav = `<div><a href="./index.html">Home</a></div>
     <div><a href="./coloringAndDyes.html">Hair Coloring & Dyes</a></div>`;
 
 const smallNav = `<div class="dropdown">
-    <img src="./client/assets/images/hamburger.png" id="dropdown"/>
+    <img src="./assets/images/icon_60x60.webp" id="dropdown"/>
     <div class="dropdown-content" id="myDropdown">
         <a href="index.html">Home</a>
         <a href="hairSpray.html">Hair Spray</a>
