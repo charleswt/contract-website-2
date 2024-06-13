@@ -28,9 +28,7 @@ var dropdown = document.getElementById("dropdown");
 var dropdownContent = document.getElementById("myDropdown");
 
 // Toggle dropdown content when clicking on the dropdown image
-if(nav = big){
-    return;
-}
+if(nav === big)return;
     
 dropdown.addEventListener('click', function() {
     if (dropdownContent.style.display === "block") {
