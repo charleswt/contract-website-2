@@ -1,13 +1,13 @@
 let nav = document.getElementsByClassName('bigNav')
 
 if(window.innerWidth <= 800){
-    nav = '<div><a href="./index.html">Home</a></div>
+    nav = `<div><a href="./index.html">Home</a></div>
     <div><a href="./hairSpray.html">Hair Spray</a></div>
     <div><a href="./hairRemoval.html">Hair Removal</a></div>
     <div><a href="./detanglers.html">Detanglers</a></div>
-    <div><a href="./coloringAndDyes.html">Hair Coloring & Dyes</a></div>'
+    <div><a href="./coloringAndDyes.html">Hair Coloring & Dyes</a></div>`
 } else {
-    nav = '<div class="dropdown">
+    nav = `<div class="dropdown">
 <img src="./client/assets/images/hamburger.png" id="dropdown"/>
 <div class="dropdown-content" id="myDropdown">
     <a href="index.html">Home</a>
@@ -16,7 +16,7 @@ if(window.innerWidth <= 800){
     <a href="detanglers.html">Detanglers</a>
     <a href="coloringAndDyes.html">Hair Coloring & Dyes</a>
     </div>
-  </div>'
+  </div>`
 }
 
 // Get references to the dropdown elements
