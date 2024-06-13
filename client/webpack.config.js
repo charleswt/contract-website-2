@@ -8,6 +8,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
   entry: {
     main: "./src/scripts/index.js",
+    nav: "./src/scripts/nav.js",
   },
   output: {
     filename: "[name].bundle.js",
