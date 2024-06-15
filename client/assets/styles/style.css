@@ -340,6 +340,11 @@ main h6 {
   margin: 0 .2rem;
 }
 
+.top5 ul li div img {
+  width: 100%;
+  max-width: 200px;
+}
+
 @media screen and (max-width: 800px) {
   .top5 ul {
     display: grid;
