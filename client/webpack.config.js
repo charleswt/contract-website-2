@@ -9,6 +9,7 @@ module.exports = {
   entry: {
     main: "./src/scripts/index.js",
     nav: "./src/scripts/nav.js",
+    sub: "./src/scripts/sub.js",
   },
   output: {
     filename: "[name].bundle.js",

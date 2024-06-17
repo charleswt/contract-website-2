@@ -42,6 +42,14 @@ code {
   font-family: inherit;
 }
 
+input {
+  border-style: none;
+}
+
+*:focus {
+  outline: none;
+}
+
 button:hover, input:hover {
   cursor: pointer;
 }
@@ -155,7 +163,7 @@ header div div div a:visited {
 /* BLOG POST */
 /* ///////// */
 
-main {
+.blogMain {
   display: flex;
   margin: 0 auto;
   width: 100%;
@@ -314,12 +322,76 @@ main h6 {
 /* index */
 /* ///// */
 
-.top5 {
-  padding: 1rem;
-  border-top: 3px solid black;
-  border-bottom: 3px solid black;
-  margin-top: 4rem;
+.index {
+  width: 100%;
+}
+
+.newsLetter {
+  font-size: 2rem;
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+@media screen and (width <= 600px) {
+  .newsLetter {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (width <= 450px) {
+  .newsLetter {
+    font-size: 1.2rem;
+  }
+}
+
+.newsLetterTitle {
+  margin-bottom: .5rem;
+}
+
+.newsLetterBtn {
+  display: flex;
+  margin: 0 auto;
+  border: 2px solid rgb(241, 116, 116);
+  border-radius: 3rem;
+}
+
+.newsLetterBtn input {
+  padding: .5rem;
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+}
+
+.newsLetterBtn div {
+padding: .5rem;
+background-color: rgb(241, 116, 116);
+color: white;
+border-top-right-radius: 3rem;
+border-bottom-right-radius: 3rem
+}
+
+.newsLetterBtn div:active {
+background-color: rgb(241, 170, 170);
+}
+
+.top5 {
+  margin: 0 auto;
+  margin-top: 3rem;
+  width: 100vw;
+  border-top: 3px solid rgb(241, 170, 170);
+  border-bottom: 3px solid rgb(241, 170, 170);
+  background-color: white;
+}
+
+.centerTop5 {
+  max-width: 1300px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  padding: 1rem;
   flex-direction: column;
 }
 
@@ -360,6 +432,9 @@ main h6 {
 }
 
 .about {
+  max-width: 1300px;
+  width: 100%;
+  margin: auto;
   margin-top: 4rem;
 }
 
@@ -369,21 +444,26 @@ main h6 {
 }
 
 .about div h2 {
+  text-align: center;
   font-size: 1.8rem;
   margin-bottom: .7rem;
 }
 
-.about div h3 {
-  font-size: 1.5rem;
-  margin-bottom: .5rem;
-}
-
-.about div h4 {
-  margin-bottom: .5rem;
-  border-bottom: 3px solid rgba(0, 0, 0, .3);
-}
-
-.about div article {
+.about div p {
+  margin: auto;
+  width: 90%;
+  text-indent: 2rem;
   line-height: 2rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.indexBlog {
+  border: none;
+}
+
+.indexBlog div p {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
 }
