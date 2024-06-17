@@ -1,4 +1,4 @@
-const Email = require('../../server/models/email');
+const Email = require('../../../server/models/email');
 const path = require('path')
 
 const subBtn = document.querySelector('#subBtn');
