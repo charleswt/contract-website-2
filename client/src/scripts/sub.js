@@ -1,14 +1,22 @@
-const Email = require('../../../server/models/email');
-const path = require('path')
-
 const subBtn = document.querySelector('#subBtn');
 
-subBtn.addEventListener('click',async()=>{
-    const subInput = await document.querySelector('#subInput').value;
+subBtn.addEventListener('click', async () => {
+    const subInput = document.querySelector('#subInput').value;
 
-    const createEmail = await Email.create({ email: subInput});
+    try {
+        const res = await fetch('/api/emails/createEmail', {
+            method: 'POST',
+            body: JSON.stringify({ email: subInput }),
+            headers: { 'Content-Type': 'application/json' }
+        });
 
-    if(createEmail)console.log(createEmail);
-})
-
-console.log(path)
+        if (res.ok) {
+            const data = await res.json();
+            console.log('Response:', data);
+        } else {
+            console.error('Error:', res.statusText);
+        }
+    } catch (e) {
+        console.error('Fetch error:', e);
+    }
+});

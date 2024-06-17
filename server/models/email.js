@@ -9,6 +9,6 @@ const postSchema = new Schema({
     },
 })
 
-const Model = model('Email', postSchema);
+const Email = model('Email', postSchema);
 
-module.exports = Model;
+module.exports = Email;
