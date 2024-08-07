@@ -7,6 +7,10 @@ const postSchema = new Schema({
         unique: true,
         validate: /^\S+@\S+\.\S+$/
     },
+    name: {
+        type: String,
+        required: true
+    }
 })
 
 const Email = model('Email', postSchema);

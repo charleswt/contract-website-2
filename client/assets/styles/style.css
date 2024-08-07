@@ -353,23 +353,54 @@ main h6 {
 
 .newsLetterBtn {
   display: flex;
+  flex-direction: column;
   margin: 0 auto;
-  border: 2px solid rgb(241, 116, 116);
-  border-radius: 3rem;
-}
-
-.newsLetterBtn input {
-  padding: .5rem;
-  border-top-left-radius: 3rem;
-  border-bottom-left-radius: 3rem;
 }
 
 .newsLetterBtn div {
+  background-color: rgb(241, 116, 116);
+  padding: .5rem;
+  border-radius: 3rem;
+}
+
+.newsLetterBtn p {
+  
+  background-color: rgb(241, 116, 116);
+  padding: .25rem;
+  border-radius: 1.8rem;
+}
+
+.newsLetterBtn p input {
+  padding: .5rem;
+  border-radius: 3rem;
+}
+
+@media screen and (width <= 825px) {
+  .newsLetterBtn, .newsLetterBtn p {
+    width: fit-content;
+  }
+  .newsLetterBtn p {
+    display: flex;
+    flex-direction: column;
+  }
+  .newsLetterBtn p input {
+    margin: .5rem;
+  }
+}
+
+#subBtn {
 padding: .5rem;
+margin-top: 1rem;
 background-color: rgb(241, 116, 116);
 color: white;
-border-top-right-radius: 3rem;
-border-bottom-right-radius: 3rem
+border-radius: 3rem;
+}
+
+#subError {
+  font-size: 1.8rem;
+  margin: 1rem;
+  color: rgb(241, 116, 116);
+  text-align: center;
 }
 
 .newsLetterBtn div:active {
