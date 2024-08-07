@@ -1,40 +1,47 @@
-const subBtn = document.querySelector('#subBtn');
+const subBtn = document.querySelector("#subBtn");
 
-subBtn.addEventListener('click', async () => {
-    const subInput = document.querySelector('#subInput');
-    const subInputName = document.querySelector('#subInputName');
-    const subError = document.querySelector('#subError');
+subBtn.addEventListener("click", async () => {
+  const subInput = document.querySelector("#subInput");
+  const subInputName = document.querySelector("#subInputName");
+  const subError = document.querySelector("#subError");
 
-    const values = {subInput,subInputName}
+  const email = subInput.value;
+  const name = subInputName.value;
 
-    switch(values){
-        case values.subInputName.value.split(" ").length !== 2 && !values.subInput.value:
-            return subError.innerHTML = "Please fill out for before you subscribe."
-        case values.subInputName.value.split(" ").length !== 2:
-            return subError.innerHTML = "Please enter first name followed by a space and then your last name.";
-        case !values.subInput.value:
-            return subError.innerHTML = "Please enter your eamil address."
+  // Error handling
+  if (!email && name.split(" ").length !== 2) {
+    subError.innerHTML = "Please fill out the form before you subscribe.";
+    return;
+  }
+
+  if (name.split(" ").length !== 2) {
+    subError.innerHTML = "Please enter first name followed by a space and then your last name.";
+    return;
+  }
+
+  if (!email) {
+    subError.innerHTML = "Please enter your email address.";
+    return;
+  }
+
+  try {
+    const res = await fetch("/api/emails/createEmail", {
+      method: "POST",
+      body: JSON.stringify({ email, name }),
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      console.log("Response:", data);
+      subInput.value = "";
+      subInputName.value = "";
+      subError.innerHTML = "Thanks For Subscribing!";
+    } else {
+      subError.innerHTML = "You are already subscribed, thank you!";
     }
-
-    try {
-        const res = await fetch('/api/emails/createEmail', {
-            method: 'POST',
-            body: JSON.stringify({ email: subInput.value, name: subInputName.value }),
-            headers: { 'Content-Type': 'application/json' }
-        });
-
-        if (res.ok) {
-            subInput.innerHTML, subInputName.innerHTML = ""
-            const data = await res.json();
-            console.log('Response:', data);
-            subError.innerHTML = "Thanks For Subscribing!";
-
-        } else if (res.status === 400) {
-            subError.innerHTML = "You are already subscribed, thank you!"
-            console.error('Error:', res.statusText.error);
-        }
-    } catch (err) {
-        subError.innerHTML = "Sorry for the inconvenience, please try again later."
-        console.error('Fetch error:', err);
-    }
+  } catch (err) {
+    subError.innerHTML = "Sorry for the inconvenience, please try again later.";
+    console.error("Fetch error:", err);
+  }
 });
