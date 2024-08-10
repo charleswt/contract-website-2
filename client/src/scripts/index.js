@@ -10,7 +10,6 @@ import imgLogo from '../../assets/images/logo.webp'
 import boldPowder from '../../assets/images/BOLDIFYpowder.webp'
 import tymo from '../../assets/images/TYMO.webp'
 import garnierDye from '../../assets/images/garnierDye.webp'
-import kenraDrySpray from '../../assets/images/kenraDrySpray.webp'
 import livingProofTextureSpray from '../../assets/images/livingProofTextureSpray.webp'
 import moroccanoilTreatment from '../../assets/images/moroccanoilTreatment.webp'
 
