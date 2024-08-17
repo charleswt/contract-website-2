@@ -15,6 +15,8 @@ import moroccanoilTreatment from '../../assets/images/moroccanoilTreatment.webp'
 import TRESemmeHOLD from "../../assets/images/TRESemmeHOLD.webp"
 import OLOVBikiniTrimmer from "../../assets/images/OLOVBikiniTrimmer.webp"
 import NaturtintPermanentHair from "../../assets/images/NaturtintPermanentHair.webp"
+import lubexGlow6 from "../../assets/images/lubexGlow6.webp"
+import meridianTrimmer from "../../assets/images/meridianTrimmer.webp"
 
 
 // Check if service workers are supported
