@@ -12,6 +12,10 @@ import tymo from '../../assets/images/TYMO.webp'
 import garnierDye from '../../assets/images/garnierDye.webp'
 import livingProofTextureSpray from '../../assets/images/livingProofTextureSpray.webp'
 import moroccanoilTreatment from '../../assets/images/moroccanoilTreatment.webp'
+import TRESemmeHOLD from "../../assets/images/TRESemmeHOLD.webp"
+import OLOVBikiniTrimmer from "../../assets/images/OLOVBikiniTrimmer.webp"
+import NaturtintPermanentHair from "../../assets/images/NaturtintPermanentHair.webp"
+
 
 // Check if service workers are supported
 if ('serviceWorker' in navigator) {
